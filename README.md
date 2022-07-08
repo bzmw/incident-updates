@@ -80,3 +80,26 @@ Bootstrap v5 is installed using npm and customised by tweaking your variables in
 You can find a list of available variables [in the bootstrap source](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss), or get explanations on them in the [Bootstrap docs](https://getbootstrap.com/docs/5.1/customize/sass/).
 
 Bootstrap's javascript as well as its dependencies is concatenated into a single file: `static/js/vendors.js`.
+
+## Database Schema
+
+### Account
+ - One to Many Users
+ - All users are admin
+ - Unique on company email
+
+### Users
+ - For the management of an account
+
+### Slack Auth
+ - Many to One for an Account
+
+### Slack Connection
+ - Many to one for an Account
+ - Channel
+
+### PagerDuty Connection
+ - Many to one for an Account
+ - API Key
+ - Service ID
+ - Webhook Something?
